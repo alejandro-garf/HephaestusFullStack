@@ -1,0 +1,135 @@
+@tailwind base; /* Tailwind's base styles */
+@tailwind components; /* Tailwind's component styles */
+@tailwind utilities; /* Tailwind's utility classes */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+/* Root variables for theming colors */
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-mid-rgb: 17, 24, 39;
+  --background-end-rgb: 31, 41, 55;
+}
+
+/* Global styles for the body */
+body {
+  font-family: 'Inter', sans-serif;
+  color: rgb(var(--foreground-rgb));
+  background-color: rgb(var(--background-end-rgb));
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styles for the navbar */
+.navbar {
+  background: linear-gradient(
+    to bottom,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-mid-rgb))
+  );
+  color: rgb(var(--foreground-rgb));
+  padding: 1rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+}
+
+/* Styles for the home container */
+.home-container {
+  background: linear-gradient(
+    to bottom,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-mid-rgb)),
+    rgb(var(--background-end-rgb))
+  );
+  color: rgb(var(--foreground-rgb));
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  padding: 4rem 10%;
+}
+
+/* Styles for the product information section */
+.product-info {
+  background: linear-gradient(
+    to bottom,
+    rgb(var(--background-end-rgb)),
+    rgb(var(--background-mid-rgb)),
+    rgb(var(--background-start-rgb))
+  );
+  color: rgb(var(--foreground-rgb));
+  font-family: 'Inter', sans-serif;
+  min-height: 50vh;
+  padding: 4rem 10%;
+}
+
+/* Styles for the footer */
+.footer {
+  background: rgb(var(--background-start-rgb));
+  padding: 1rem 0;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  color: rgb(var(--foreground-rgb));
+}
+
+/* Gradient text effect for headings and paragraphs */
+.text-section h1, .text-section p, .product-info h2, .product-info p {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.6)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Button styles for sign-in and dashboard actions */
+.sign-in-btn, .Dashboard-btn {
+  background: linear-gradient(
+    to right,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb))
+  );
+  color: rgb(var(--foreground-rgb));
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+/* Hover effect for buttons */
+.sign-in-btn:hover, .Dashboard-btn:hover {
+  background-color: rgb(var(--background-mid-rgb));
+}
+
+/* Styles for images within the image and logo sections */
+.image-section img, .logo-section img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Layout for the product information section */
+.product-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Text section within the product information */
+.product-info .info-text {
+  flex: 2;
+  padding-right: 2rem;
+}
+
+/* Logo section within the product information */
+.product-info .logo-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
