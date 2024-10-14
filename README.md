@@ -1,4 +1,4 @@
-# HephaestusFullStack Bin Monitering Software
+# Hephaestus Water TrashBin Monitering Platform
 # River Pollution Monitoring Webapp
 
 ## Overview
